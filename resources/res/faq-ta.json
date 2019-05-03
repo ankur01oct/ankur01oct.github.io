@@ -1,0 +1,28 @@
+﻿{
+  "faqs": [
+    {
+      "topic": "What is HTML? HTML is the standard language? for describing the structure?",
+      "description": "HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages."
+    },
+    {
+      "topic": "What is Bootstrap?",
+      "description": "Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. "
+    },
+    {
+      "topic": " What is CSS?",
+      "description": "CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc."
+    },
+    {
+      "topic": " What is CSS?",
+      "description": "CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc."
+    },
+    {
+      "topic": " What is CSS?",
+      "description": "CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc."
+    },
+    {
+      "topic": " What is CSS?",
+      "description": "CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc."
+    }
+  ]
+}

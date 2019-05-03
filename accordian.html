@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Example of Bootstrap 3 Accordion with Arrow Icon</title>
+        <link rel="stylesheet" href="resources/mobilefont/noto-sans.css" >
+        <link rel="stylesheet" href="resources/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="resources/css/app.css" >
+        <script src="resources/js/jquery.min.js"></script>
+        <script src="resources/js/bootstrap.min.js"></script>
+        <script src="resources/js/app.js"></script>
+    </head>
+    <body>
+        <div class="help-header">
+            <h4>Help</h4>
+            <p>Frequently asked questions</p>
+        </div>
+        <div class="info-msg">
+            <p>Look through the list to resolve your issue</p>
+        </div>
+        <div class="info-msg-send-email" hidden="true">
+            <p>Tell us a more about the problem you faced</p>
+        </div>
+        <div class="bs-example">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        <div class="panel-heading" >
+                            <h4 class="panel-title">
+                                What is HTML? HTML is the standard language? for describing the structure?<img src="./resources/images/Arrow.png" class="btn-arrow">
+                            </h4>
+                        </div>
+                    </a>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                        </div>
+                        <div class="panel-interact">
+                            <p>Did this answer help you?</p>
+                            <button type="button" class="btn" id = "btn-no">No</button>
+                            <button type="button" class="btn" style="color: green" id = "btn-yes">Yes</button>
+                            <p class="yes-clicked" hidden="true">Thanks for your response!</p>
+                        </div>
+                        <div class="panel-info" hidden="true">
+                            <h6>Sorry about that!</h6>
+                            <p>What more would you like to know?</p>
+                            <form action="#"> 
+                                <textarea type="text" name="moreInfo" placeholder="Type here..." class="input-text" raws='3'  maxlength="1000"></textarea>
+                                <input type="submit" value="Submit" class="submit-button">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                What is Bootstrap?<img src="./resources/images/Arrow.png" class="btn-arrow">
+                            </h4>
+                        </div>
+                    </a>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+                        </div>
+                        <div class="panel-interact">
+                            <p>Did this answer help you?</p>
+                            <button type="button" class="btn" id = "btn-no" >No</button>
+                            <button type="button" class="btn" style="color: green" id = "btn-yes">Yes</button>
+                            <p class="yes-clicked" hidden="true">Thanks for your response!</p>
+                        </div>
+                        <div class="panel-info" hidden="true">
+                            <h6>Sorry about that!</h6>
+                            <p>What more would you like to know?</p>
+                            <form action="#"> 
+                                <textarea type="text" name="moreInfo" placeholder="Type here..." class="input-text" raws='3'  maxlength="1000"></textarea>
+                                <input type="submit" value="Submit" class="submit-button">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                What is CSS?<img src="./resources/images/Arrow.png" class="btn-arrow">
+                            </h4>
+                        </div>
+                    </a>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+                        </div>
+                        <div class="panel-interact">
+                            <p>Did this answer help you?</p>
+                            <button type="button" class="btn" id = "btn-no" >No</button>
+                            <button type="button" class="btn" style="color: green" id = "btn-yes">Yes</button>
+                            <p class="yes-clicked" hidden="true">Thanks for your response!</p>
+                        </div>
+                        <div class="panel-info" hidden="true">
+                            <h6>Sorry about that!</h6>
+                            <p>What more would you like to know?</p>
+                            <form action="#"> 
+                                <textarea type="text" name="moreInfo" placeholder="Type here..." class="input-text" raws='3'  maxlength="1000"></textarea>
+                                <input type="submit" value="Submit" class="submit-button">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="send-email">
+            <button class="report-button"><img src="./resources/images/Report.png"> Report other issues</button>
+        </div>
+        <div class = "send-email-form" hidden="true">
+            <form action="#"> 
+                <textarea type="text" name="moreInfo" placeholder="Type here..." class="input-text-form" raws='3'  maxlength="1000"></textarea>
+                <p class = "send-email-info">After you add details in the text box and tap the Initiate email button, we will trigger an email on your behalf. You can add further details and/or attach files there.</p>
+                <input type="submit" value="Initiate email" class="submit-button">
+            </form>
+        </div>
+    </body>
+</html>                                		                                		                            
