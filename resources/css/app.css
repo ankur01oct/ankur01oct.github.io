@@ -230,6 +230,7 @@ P{
     border-color: #c3c3c3;
     padding-left: 8px;
     padding-top: 8px;
+    resize: none;
 }
 
 @media only screen and (min-width : 1025px) {
@@ -244,6 +245,7 @@ P{
         padding-left: 8px;
         padding-top: 8px;
         margin: 0px;
+        resize: none;
     }
 }
 a{
@@ -255,6 +257,14 @@ a:active, a:hover{
     color: #23527c;
 }
 
-@media only screen and (max-width : 1024px) {
-
+#textareainfo{
+    opacity: .5;
+    position: absolute;
+    bottom: 0;
+    right: 7px;
+    font-weight: normal;
+    font-size: 12px;
+}
+#textareadiv{
+    position: relative
 }
