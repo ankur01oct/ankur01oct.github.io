@@ -33,6 +33,10 @@ P{
     max-width: 1024px;
     margin: 0 auto;
 }
+.panel-title {
+    text-decoration: none;
+    color: black;
+}
 @media only screen and (max-width : 1024px) {
 
 .info-msg-send-email>p,.info-msg>p{
@@ -132,6 +136,9 @@ P{
     padding-left: 8px;
     padding-top: 8px;
 }
+form {
+    margin: 0 15px;
+}
 .submit-button{
     min-width: 90vw;
     color: #fff;
@@ -202,7 +209,7 @@ P{
     height: 32px;
 }
     #know-more-form{
-        margin: 0 15px;
+        margin: 15px;
     }
     .panel-info{
         overflow: hidden;
@@ -210,7 +217,8 @@ P{
 
 }
 .input-text-form{
-    width: 100%;
+    min-width: -webkit-fill-available;
+    width: 96%;
     height: 128px;
     border-radius: 5px;
     box-shadow: none;

@@ -17,7 +17,7 @@ $(document).ready(function(){
         value.type = "Yes-Clicked"
         value.position = Number($(this).parent().parent().attr("id").substr(-1)) +1;
         value.value = {};
-        value.value.topic = $(this).parent().parent().parent().find("h4").first().text().trim();
+        value.value.topic = $(this).parent().parent().parent().find(".panel-title").first().text().trim();
         value.value.description = $(this).parent().parent().find("p").first().text();
         console.log(value);
         window.parent.postMessage(value,"*");
@@ -33,7 +33,7 @@ $(document).ready(function(){
         value.type = "No-Clicked"
         value.position = Number($(this).parent().parent().attr("id").substr(-1)) +1;
         value.value = {};
-        value.value.topic = $(this).parent().parent().parent().find("h4").first().text().trim();
+        value.value.topic = $(this).parent().parent().parent().find(".panel-title").first().text().trim();
         value.value.description = $(this).parent().parent().find("p").first().text();
         console.log(value);
         window.parent.postMessage(value,"*");
@@ -55,7 +55,7 @@ $(document).ready(function(){
             value.type = "No-Clicked-Know-More-Text"
             value.position = Number($(this).parent().parent().attr("id").substr(-1)) +1;
             value.value = {};
-            value.value.topic = $(this).parent().parent().parent().find("h4").first().text().trim();
+            value.value.topic = $(this).parent().parent().parent().find(".panel-title").first().text().trim();
             value.value.description = $(this).parent().parent().find("p").first().text();
             value.value.knowMoreText=inputVal;
             window.parent.postMessage(value,"*");
