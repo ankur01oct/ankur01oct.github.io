@@ -31,7 +31,6 @@ $( document ).ready(function() {
             +'</div>'
         
         $('#loading').replaceWith(html);
-        console.log(html)
     });
 });
 
