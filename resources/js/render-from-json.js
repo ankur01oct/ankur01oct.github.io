@@ -3,7 +3,8 @@ console.log('selected Lang', selectedLang);
 $( document ).ready(function() {
     var jsonUrl;
     if(selectedLang){
-        jsonUrl = "./resources/res/faq-" + selectedLang.trim() + ".json"
+        window.faqSelectedLang = selectedLang.trim();
+        jsonUrl = "./resources/res/faq-" + window.faqSelectedLang + ".json"
     }else{
         jsonUrl="./resources/res/faq-en.json"
     }

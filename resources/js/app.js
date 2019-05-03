@@ -74,7 +74,8 @@ $(document).ready(function(){
         value.type = "Report-Other-Issues-Clicked";
         window.parent.postMessage(value,"*");
         console.log(value);
-        window.location.href = "reportIssue.html";
+        window.location.href = "reportIssue.html?selectedlang="+window.selectedLang;
+        console.log(window.faqSelectedLang);
     });
 
     $(document).on( 'submit','#send-email-form',function(e) {
