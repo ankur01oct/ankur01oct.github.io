@@ -74,14 +74,15 @@ $(document).ready(function(){
         value.type = "Report-Other-Issues-Clicked";
         window.parent.postMessage(value,"*");
         console.log(value);
-        $(this).hide();
-        let parent = $(this).parent();
-        parent.find('.bs-example').hide();
-        parent.find('.info-msg').hide();
-        parent.find('.help-header').hide();
-        parent.find('.help-header-send-email').removeAttr('hidden');
-        parent.find('.info-msg-send-email').removeAttr('hidden');
-        parent.find('.send-email-form').removeAttr('hidden');
+//        $(this).hide();
+//        let parent = $(this).parent();
+//        parent.find('.bs-example').hide();
+//        parent.find('.info-msg').hide();
+//        parent.find('.help-header').hide();
+//        parent.find('.help-header-send-email').removeAttr('hidden');
+//        parent.find('.info-msg-send-email').removeAttr('hidden');
+//        parent.find('.send-email-form').removeAttr('hidden');
+          window.location.href = "reportIssue.html";
     });
 
     $(document).on( 'submit','#send-email-form',function(e) {

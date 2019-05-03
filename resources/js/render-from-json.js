@@ -1,15 +1,5 @@
-//$.getJSON("mydata.json", function(data) {
-//    var html = '';
-//    $.each(data, function(key, value){
-//        html += '<div class="dcell">';
-//        html += '<img src="images/'+value.product+'.png"/>';
-//        html += '<label for="'+value.product+'">'+value.name+':</label>';
-//        html += '<input type="text" id="'+value.product+'" name="'+value.product+'" value="0" stock="'+value.stock+'" price="'+value.price+'" required>';
-//        html += '</div>';
-//    });
-//$('#yourContainerId').html(html);
-//});
 var selectedLang = getUrlVars()["selectedlang"];
+console.log('selected Lang', selectedLang);
 $( document ).ready(function() {
     var jsonUrl;
     if(selectedLang){
@@ -25,16 +15,9 @@ $( document ).ready(function() {
             +'<h4>'+data.constants.help+'</h4>'
             +'<p>'+data.constants.faqMsg+'</p>'
             +'</div>'
-            +'<div class="help-header-send-email" hidden="true">'
-            +'<h4>'+data.constants.reportIssue+'</h4>'
-            +'<p>'+data.constants.explainMsg+'</p>'
-            +'</div>'
             +'<div class="info-msg">'
             +'<p>'+data.constants.resolveMsg+'</p>'
             +'</div>'
-            +'<div class="info-msg-send-email" hidden="true">'
-            + '<p>'+data.constants.tellMoreMsg+'</p>'
-            + '</div>'
         $('#header').replaceWith(html);
         html='';
         $.each(data.faqs, function(key, value){
@@ -59,7 +42,7 @@ $( document ).ready(function() {
                 +'<div class="panel-info" hidden="true">'
                 +'<h6>'+data.constants.sorryMsg+'</h6>'
                 +'<p>'+data.constants.knowMoreMsg+'</p>'
-                +'<form action="#" id="know-more-form"> '
+                +'<form action="#" id="know-more-form" class = "know-more-form"> '
                 +'<textarea type="text" name="moreInfo" placeholder="'+data.constants.typeHere+'" class="input-text"  maxlength="1000"></textarea>'
                 +'<input type="submit" value="'+data.constants.submitButton+'" class="submit-button">'
                 +'</form>'
@@ -74,13 +57,6 @@ $( document ).ready(function() {
         html += '<div class="send-email">'
             +'<button class="report-button"><img src="./resources/images/Report.png"></span> '+data.constants.reportIssueMsg+'</button>'
             +'</div>'
-            +'<div class = "send-email-form" hidden="true">'
-            +'<form action="#" id ="send-email-form"> '
-            +'<textarea type="text" name="moreInfo" placeholder="'+data.constants.typeHere+'" class="input-text-form" maxlength="1000"></textarea>'
-                +'<p class = "send-email-info">'+data.constants.triggerEmailMsg+'</p>'
-                +'<input type="submit" value="'+data.constants.initiateEmailButton+'" class="submit-button">'
-                +'</form>'
-                +'</div>'
         $('#send-email').replaceWith(html);
     })
 });
