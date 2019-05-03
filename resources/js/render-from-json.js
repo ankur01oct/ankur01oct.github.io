@@ -38,7 +38,6 @@ $( document ).ready(function() {
         $('#header').replaceWith(html);
         html='';
         $.each(data.faqs, function(key, value){
-            console.log('value  : ', value, 'key  ', key)
             html += '<div class="panel panel-default">'
                 +'<a data-toggle="collapse" data-parent="#accordion" href="#collapse'+key+'">'
                 +'<div class="panel-heading" >'
