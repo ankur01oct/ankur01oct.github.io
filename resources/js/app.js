@@ -1,20 +1,22 @@
 $(document).ready(function(){
     // Add minus icon for collapse element which is open by default
     $(".collapse.in").each(function(){
-        $(this).siblings(".panel-heading").find(".btn-arrow").addClass("rotate");
+        $(this).siblings(".panel-heading").find("img").addClass("rotate");
     });
 
     // Toggle plus minus icon on show hide of collapse element
     $(".collapse").on('show.bs.collapse', function(){
-        $(this).parent().find(".btn-arrow").addClass("rotate");
+        console.log("working");
+        $(this).parent().find("img").addClass("rotate");
     }).on('hide.bs.collapse', function(){
-        $(this).parent().find(".btn-arrow").removeClass("rotate");
+                console.log("working");
+        $(this).parent().find("img").removeClass("rotate");
     });
 
     $(document).on( 'click','[id="btn-yes"]',function(){
         var value = {};
         console.log("Yes-Clicked");
-        value.type = "Yes-Clicked"
+        value.action = "Yes-Clicked"
         value.position = Number($(this).parent().parent().attr("id").substr(-1)) +1;
         value.value = {};
         value.value.topic = $(this).parent().parent().parent().find(".panel-title").first().text().trim();
@@ -30,7 +32,7 @@ $(document).ready(function(){
     $(document).on( 'click','[id="btn-no"]',function(){
         console.log("No-Clicked");
         var value = {};
-        value.type = "No-Clicked"
+        value.action = "No-Clicked"
         value.position = Number($(this).parent().parent().attr("id").substr(-1)) +1;
         value.value = {};
         value.value.topic = $(this).parent().parent().parent().find(".panel-title").first().text().trim();
@@ -52,7 +54,7 @@ $(document).ready(function(){
         var inputVal = $( this )[0][0].value; // resolves to current input element.
         if(inputVal && inputVal.length){
             var value = {};
-            value.type = "No-Clicked-Know-More-Text"
+            value.action = "No-Clicked-Know-More-Text"
             value.position = Number($(this).parent().parent().attr("id").substr(-1)) +1;
             value.value = {};
             value.value.topic = $(this).parent().parent().parent().find(".panel-title").first().text().trim();
@@ -71,10 +73,14 @@ $(document).ready(function(){
     });
     $(document).on('click', '.send-email', function(){
         var value = {};
-        value.type = "Report-Other-Issues-Clicked";
+        value.action = "Report-Other-Issues-Clicked";
         window.parent.postMessage(value,"*");
         console.log(value);
-        window.location.href = "reportIssue.html?selectedlang="+window.selectedLang;
+        if(window.selectedLang){
+            window.location.href = "reportIssue.html?selectedlang="+window.selectedLang;
+        } else{
+            window.location.href = "reportIssue.html"
+        }
         console.log(window.faqSelectedLang);
     });
 
@@ -83,14 +89,14 @@ $(document).ready(function(){
         var inputVal = $( this )[0][0].value; // resolves to current input element.
         if(inputVal && inputVal.length){
             var value = {};
-            value.type = "Initiate-Email-Clicked";
+            value.action = "Initiate-Email-Clicked";
             value.value = {};
-            value.InitiateEmailBody=inputVal;
+            value.initiateEmailBody=inputVal;
             window.parent.postMessage(value,"*");
             console.log(value);
         }
     });
-    $(document).on( 'keypress','.input-text-form',function() {
+    $(document).on( 'keyup','.input-text-form',function() {
         var maxLength = 1000;
         var length = $(this).val().length;
         var length = maxLength-length;
