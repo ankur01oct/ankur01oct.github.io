@@ -10,7 +10,7 @@ body{
     transform: rotate(180deg);  /* Standard syntax */    
 }
 .btn-arrow{
-    float: right;
+    padding: 4px;
 }
 P{
     font-size: 13px;
@@ -35,6 +35,9 @@ P{
 }
 .panel-title {
     text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 @media only screen and (max-width : 1024px) {
 
@@ -146,7 +149,9 @@ P{
     margin: 10px 0px 16px 0px;
 }
 #initiate-email{
-    margin-top: 40%;
+   left: 0;
+    bottom: 0;
+    position: absolute;
 }
 @media only screen and (max-width : 1024px) {
     .report-button{
@@ -177,6 +182,10 @@ P{
 .send-email-form{
     text-align: center;
     margin: 0 15px;
+}
+#send-email-form{
+    height: 80vh;
+    position: relative;
 }
 
 .send-email-info{
