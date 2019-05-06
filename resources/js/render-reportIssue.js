@@ -10,7 +10,6 @@ $( document ).ready(function() {
 
     console.log(jsonUrl);
     $.getJSON(jsonUrl, function(data) {
-        console.log(data);
         var html ='';
         html += '<div class="help-header-send-email">'
             +'<h4>'+data.constants.reportIssue+'</h4>'
