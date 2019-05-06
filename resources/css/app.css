@@ -162,6 +162,7 @@ P{
         border-radius: 4px;
         border-style:solid;
         border-color:  #024f9d;
+        margin-bottom: 50px;
     }
 }
 @media only screen and (min-width : 1025px) {
@@ -173,6 +174,7 @@ P{
         border-radius: 4px;
         border-style:solid;
         border-color:  #024f9d;
+        margin-bottom: 50px;
     }
 }
 .send-email{
