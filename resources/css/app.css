@@ -148,12 +148,13 @@ P{
     border-color:  #024f9d;
     margin: 10px 0px 16px 0px;
 }
-#initiate-email{
+
+@media only screen and (max-width : 1024px) {
+    #initiate-email{
    left: 0;
     bottom: 50px;
     position: absolute;
 }
-@media only screen and (max-width : 1024px) {
     .report-button{
         min-width: 90vw;
         color: #fff;
@@ -224,6 +225,13 @@ P{
     }
     .panel-info{
         overflow: hidden;
+        text-align: left;
+    }
+    .panel-info > h6 {
+        margin-left: 15px;
+    }
+    .panel-info > p {
+        margin-left: 15px;
     }
     #initiate-email{
     margin-top: 10px;
