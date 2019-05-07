@@ -12,7 +12,7 @@ $(document).ready(function(){
     $(document).on( 'click','[id="btn-yes"]',function(){
         var value = {};
         // console.log("Yes-Clicked");
-        value.action = "Yes-Clicked"
+        value.action = "yes-clicked"
         value.position = Number($(this).parent().parent().attr("id").substr(-1)) +1;
         value.value = {};
         value.value.topic = $(this).parent().parent().parent().find(".panel-title").first().text().trim();
@@ -28,7 +28,7 @@ $(document).ready(function(){
     $(document).on( 'click','[id="btn-no"]',function(){
         // console.log("No-Clicked");
         var value = {};
-        value.action = "No-Clicked"
+        value.action = "no-clicked"
         value.position = Number($(this).parent().parent().attr("id").substr(-1)) +1;
         value.value = {};
         value.value.topic = $(this).parent().parent().parent().find(".panel-title").first().text().trim();
@@ -50,7 +50,7 @@ $(document).ready(function(){
         var inputVal = $( this )[0][0].value; // resolves to current input element.
         if(inputVal && inputVal.length){
             var value = {};
-            value.action = "No-Clicked-Know-More-Text"
+            value.action = "no-clicked"
             value.position = Number($(this).parent().parent().attr("id").substr(-1)) +1;
             value.value = {};
             value.value.topic = $(this).parent().parent().parent().find(".panel-title").first().text().trim();
@@ -69,7 +69,7 @@ $(document).ready(function(){
     });
     $(document).on('click', '.send-email', function(){
         var value = {};
-        value.action = "Report-Other-Issues-Clicked";
+        value.action = "report-other-issues-clicked";
         window.parent.postMessage(value,"*");
         // console.log(value);
         if(window.selectedLang){
@@ -86,7 +86,7 @@ $(document).ready(function(){
         var inputVal = $( this )[0][0].value; // resolves to current input element.
         if(inputVal && inputVal.length){
             var value = {};
-            value.action = "Initiate-Email-Clicked";
+            value.action = "initiate-email-clicked";
             value.value = {};
             value.initiateEmailBody=inputVal;
             window.parent.postMessage(value,"*");
