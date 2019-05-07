@@ -11,13 +11,13 @@ $(document).ready(function(){
 
     $(document).on( 'click','[id="btn-yes"]',function(){
         var value = {};
-        // console.log("Yes-Clicked");
+        console.log("Yes-Clicked");
         value.action = "yes-clicked"
         value.position = Number($(this).parent().parent().attr("id").substr(-1)) +1;
         value.value = {};
         value.value.topic = $(this).parent().parent().parent().find(".panel-title").first().text().trim();
         value.value.description = $(this).parent().parent().find("p").first().text();
-        // console.log(value);
+        console.log(value);
         window.parent.postMessage(value,"*");
         $(this).parent().find('button').hide();
         $(this).parent().find("p").first().hide();
@@ -26,14 +26,14 @@ $(document).ready(function(){
     })
 
     $(document).on( 'click','[id="btn-no"]',function(){
-        // console.log("No-Clicked");
+        console.log("No-Clicked");
         var value = {};
         value.action = "no-clicked"
         value.position = Number($(this).parent().parent().attr("id").substr(-1)) +1;
         value.value = {};
         value.value.topic = $(this).parent().parent().parent().find(".panel-title").first().text().trim();
         value.value.description = $(this).parent().parent().find("p").first().text();
-        // console.log(value);
+        console.log(value);
         window.parent.postMessage(value,"*");
         $(this).parent().hide();
         $(this).parent().parent().find('.panel-info').removeAttr('hidden');
@@ -42,7 +42,7 @@ $(document).ready(function(){
     $(document).on( 'keypress','.input-text',function() {
         if($(this).val().length > 999) {
             //display your warinig the way you chose
-            // console.log('MaxLength Reached');
+            console.log('MaxLength Reached');
         }
     });
     $(document).on( 'submit','#know-more-form',function(e) {
@@ -57,7 +57,7 @@ $(document).ready(function(){
             value.value.description = $(this).parent().parent().find("p").first().text();
             value.value.knowMoreText=inputVal;
             window.parent.postMessage(value,"*");
-            // console.log(value);
+            console.log(value);
         }
         $(this).parent().children().last().removeAttr('hidden');
         $(this).parent().css("padding", "20px");                
@@ -71,13 +71,13 @@ $(document).ready(function(){
         var value = {};
         value.action = "report-other-issues-clicked";
         window.parent.postMessage(value,"*");
-        // console.log(value);
+        console.log(value);
         if(window.selectedLang){
             window.location.href = "reportIssue.html?selectedlang="+window.selectedLang;
         } else{
             window.location.href = "reportIssue.html"
         }
-        // console.log(window.faqSelectedLang);
+        console.log(window.faqSelectedLang);
     });
 
     $(document).on( 'submit','#send-email-form',function(e) {
@@ -90,7 +90,7 @@ $(document).ready(function(){
             value.value = {};
             value.initiateEmailBody=inputVal;
             window.parent.postMessage(value,"*");
-            // console.log(value);
+            console.log(value);
         }
     });
     $(document).on( 'keyup','.input-text-form',function() {
