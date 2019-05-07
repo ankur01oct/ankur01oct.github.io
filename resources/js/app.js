@@ -2,8 +2,11 @@ $(document).ready(function(){
     // Toggle plus minus icon on show hide of collapse element
      $(document).on('show.bs.collapse', ".collapse", function() {
         $(this).parent().find(".btn-arrow").addClass("rotate");
+        $(this).parent().find(".panel-title").css({"color":"#024F9D"})
+
     }).on('hide.bs.collapse', ".collapse", function() {
         $(this).parent().find(".btn-arrow").removeClass("rotate");
+        $(this).parent().find(".panel-title").css({"color":"inherit"});
     });
 
     $(document).on( 'click','[id="btn-yes"]',function(){
@@ -79,6 +82,7 @@ $(document).ready(function(){
 
     $(document).on( 'submit','#send-email-form',function(e) {
         e.preventDefault();
+        $(this).removeClass('selected');
         var inputVal = $( this )[0][0].value; // resolves to current input element.
         if(inputVal && inputVal.length){
             var value = {};
