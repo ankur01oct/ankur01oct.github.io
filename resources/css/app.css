@@ -164,9 +164,9 @@ P{
 
 @media only screen and (max-width : 1024px) {
     #initiate-email{
-   left: 0;
+   left: 16;
     bottom: 50px;
-    position: absolute;
+    position: fixed;
 }
     .report-button{
         min-width: 90vw;
