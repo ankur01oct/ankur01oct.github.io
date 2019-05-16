@@ -18,7 +18,6 @@ $( document ).ready(function() {
             +'<div class="info-msg-send-email">'
             + '<p>'+data.constants.tellMoreMsg+'</p>'
             + '</div>'
-//            +'<div id="initiate-email-class"><button class="submit-button" id="initiate-email">' +data.constants.initiateEmailButton+ '</button></div>'
             +'<div class = "send-email-form">'
             +'<form action="#" id ="send-email-form"> '
             +'<div id="textareadiv">'
