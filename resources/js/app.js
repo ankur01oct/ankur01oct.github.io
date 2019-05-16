@@ -82,16 +82,17 @@ $(document).ready(function(){
 
     $(document).on( 'submit','#send-email-form',function(e) {
         e.preventDefault();
+        console.log(this);
         $(this).removeClass('selected');
         var inputVal = $( this )[0][0].value; // resolves to current input element.
-        if(inputVal && inputVal.length){
+//        console.log(inputVal)
             var value = {};
             value.action = "initiate-email-clicked";
             value.value = {};
             value.initiateEmailBody=inputVal;
             window.parent.postMessage(value,"*");
-            // console.log(value);
-        }
+//             console.log(value);
+        
     });
     $(document).on( 'keyup','.input-text-form',function() {
         var maxLength = 1000;
