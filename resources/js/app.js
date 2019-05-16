@@ -82,7 +82,6 @@ $(document).ready(function(){
 
     $(document).on( 'submit','#send-email-form',function(e) {
         e.preventDefault();
-        console.log(this);
         $(this).removeClass('selected');
         var inputVal = $( this )[0][0].value; // resolves to current input element.
 //        console.log(inputVal)
